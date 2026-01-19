@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swadesh - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Swadesh’s Studio</div>
+            <nav class="sidebar-nav">
+                <a href="#files" class="nav-item active" data-section="files">Files & Photos</a>
+                <a href="index.html" class="nav-item">Back to Portfolio</a>
+                <a href="login.html" class="nav-item logout">Logout</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Files Section -->
+            <section id="files" class="content-section active">
+                <h2 class="section-title">My Files & Photos</h2>
+                <div class="upload-area">
+                    <input type="file" id="file-upload" accept="image/*,video/mp4,.gif,.pdf" multiple>
+                    <label for="file-upload" class="upload-btn">Upload Files</label>
+                    <div class="drag-drop">Or drag and drop files here</div>
+                </div>
+                <div class="file-controls">
+                    <input type="text" id="search-files" placeholder="Search files...">
+                    <select id="filter-type">
+                        <option value="all">All Files</option>
+                        <option value="image">Images</option>
+                        <option value="video">Videos</option>
+                        <option value="gif">GIFs</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="file-gallery"></div>
+            </section>
+        </main>
+
+        <!-- File Preview Modal -->
+        <div id="file-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <img id="modal-image" alt="Preview">
+                <video id="modal-video" controls></video>
+                <iframe id="modal-other" frameborder="0"></iframe>
+                <div class="modal-info">
+                    <p id="modal-name"></p>
+                    <button id="download-file" class="btn">Download</button>
+                    <button id="delete-file" class="btn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

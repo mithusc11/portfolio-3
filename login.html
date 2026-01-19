@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Swadesh - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1 class="logo">Swadesh’s inventory</h1>
+    <form id="login-form" autocomplete="off">
+      <div class="password-wrapper">
+        <input type="password" id="login-password" placeholder="Enter the sacred words..." required />
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+      <button type="submit" class="pixel-btn">Enter the dark</button>
+      <div id="error-msg"></div>
+    </form>
+  </div>
+
+  <canvas id="got-canvas"></canvas>
+
+  <script>
+    function togglePassword() {
+      const passInput = document.getElementById('login-password');
+      passInput.type = passInput.type === 'password' ? 'text' : 'password';
+    }
+
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    const correctHash = "5eb3b2ed463edaed2a58a91f161ffe07ef24cf552d4bf8e1dbeba641f76e3c4c"; // Mithu@1122
+
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const password = document.getElementById('login-password').value;
+      const hashedInput = await sha256(password);
+      if (hashedInput === correctHash) {
+        window.location.href = "dashbord.html";
+      } else {
+        document.getElementById('error-msg').textContent = "You are not welcome.";
+      }
+    });
+
+    // Canvas ember animation
+    const canvas = document.getElementById("got-canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const embers = [];
+
+    class Ember {
+      constructor() {
+        this.reset();
+      }
+
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = canvas.height + Math.random() * 100;
+        this.size = Math.random() * 3 + 1;
+        this.speed = Math.random() * 0.5 + 0.2;
+        this.alpha = Math.random() * 0.5 + 0.3;
+      }
+
+      update() {
+        this.y -= this.speed;
+        if (this.y < -this.size) this.reset();
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 69, 0, ${this.alpha})`;
+        ctx.shadowColor = "orange";
+        ctx.shadowBlur = 10;
+        ctx.fill();
+      }
+    }
+
+    function initEmbers() {
+      for (let i = 0; i < 120; i++) embers.push(new Ember());
+    }
+
+    function animate() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      embers.forEach(e => {
+        e.update();
+        e.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    initEmbers();
+    animate();
+
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>

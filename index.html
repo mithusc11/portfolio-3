@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swadesh Chakraborty Mithu - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Swadesh</div>
+        <div class="hamburger">☰</div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#photo">Photo</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn auth-btn pulse-glow">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <canvas id="gaming-canvas"></canvas>
+        <div class="hero-content">
+            <h1 class="fade-in name-reveal">
+                <span>S</span><span>w</span><span>a</span><span>d</span><span>e</span><span>s</span><span>h</span>
+                <br>
+                <span>C</span><span>h</span><span>a</span><span>k</span><span>r</span><span>a</span><span>b</span><span>o</span><span>r</span><span>t</span><span>y</span>
+                <span>M</span><span>i</span><span>t</span><span>h</span><span>u</span>
+            </h1>
+            <p class="fade-in typewriter" style="width: 0; display: inline-block; opacity: 1;">Motion Graphics & Graphic Designer</p>
+            <a href="#contact" class="btn fade-in pulse-glow" onclick="scrollToContact()" style="opacity: 1;">Hire Me</a>
+            <br><br>
+            <div class="social-icons fade-in">
+                <a href="https://www.behance.net/swadeshmithu" target="_blank" class="social-icon" data-tooltip="Behance">
+                    <img src="img/behance.png" alt="Behance">
+                </a>
+                <a href="https://www.facebook.com/ghoosty90" target="_blank" class="social-icon" data-tooltip="Facebook">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.linkedin.com/in/mithu-chakrabrorty-852b7b1a2/" target="_blank" class="social-icon" data-tooltip="LinkedIn">
+                    <img src="img/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/swadesh_c_mithu/" target="_blank" class="social-icon" data-tooltip="Instagram">
+                    <img src="img/insta.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signup-modal')">×</span>
+            <h3>Signup</h3>
+            <form id="signup-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Photo Section -->
+    <section id="photo" class="photo">
+        <h2 class="scroll-reveal">Meet Swadesh</h2>
+        <div class="photo-container scroll-reveal">
+            <img src="img/aa.jpg" alt="Swadesh's Photo" class="profile-photo">
+            <p class="photo-caption">Crafting visuals that tell stories.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about parallax">
+        <div class="about-container">
+            <div class="about-bio scroll-reveal">
+                <div class="about-content scroll-reveal">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="bio">
+                        Hey there! I’m <strong>Swadesh Chakraborty Mithu</strong>, a passionate Motion Graphics & Graphic Designer with a knack for turning ideas into visually stunning stories. With over <strong>5 years of experience</strong>, I specialize in creating dynamic animations, sleek branding, and engaging visuals that captivate audiences and elevate brands. My work has helped clients boost engagement by up to <strong>40%</strong> through eye-catching motion graphics and pixel-perfect designs.
+                    </p>
+                    <p class="bio">
+                        Inspired by the bold humor and creativity of <em>Gintama</em>, I bring a playful yet professional edge to every project. Whether it’s crafting a vibrant logo animation, designing a game-inspired UI, or producing a cinematic explainer video, I thrive on pushing creative boundaries. My tools? <strong>Adobe After Effects, Photoshop, Illustrator, Premiere Pro, Blender</strong>, and a sprinkle of pixel art magic.
+                    </p>
+                    <p class="bio">
+                        I’m all about collaboration and making your vision come to life. From startups to global brands, I’ve delivered projects that resonate and convert. Ready to create something epic? Let’s team up and make your brand stand out!
+                    </p>
+                    <a href="#contact" class="btn pulse-glow about-cta" onclick="scrollToContact()">Work With Me</a>
+                </div>
+            </div>
+            <div class="about-skills scroll-reveal">
+                <h3 class="skills-title">Creative Toolkit</h3>
+                <div class="skills-icons">
+                    <div class="skill-icon" data-tooltip="Adobe Illustrator">
+                        <img src="img/adobe-illustrator.png" alt="Adobe Illustrator">
+                    </div>
+                    <div class="skill-icon" data-tooltip="Adobe Photoshop">
+                        <img src="img/adobe-photoshop.png" alt="Photoshop">
+                    </div>
+                    <div class="skill-icon" data-tooltip="After Effects">
+                        <img src="img/after-effects.png" alt="After Effects">
+                    </div>
+                    <div class="skill-icon" data-tooltip="Premiere Pro">
+                        <img src="img/premiere.png" alt="Premiere Pro">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="scroll-reveal">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card scroll-reveal">
+                <h3>Motion Graphics</h3>
+                <p>Creating engaging animations for videos, ads, and presentations.</p>
+            </div>
+            <div class="service-card scroll-reveal">
+                <h3>Graphic Design</h3>
+                <p>Designing logos, posters, and branding materials.</p>
+            </div>
+            <div class="service-card scroll-reveal">
+                <h3>Video Editing</h3>
+                <p>Editing and enhancing videos for maximum impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills parallax">
+        <h2 class="scroll-reveal">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card scroll-reveal">Adobe After Effects</div>
+            <div class="skill-card scroll-reveal">Adobe Photoshop</div>
+            <div class="skill-card scroll-reveal">Adobe Illustrator</div>
+            <div class="skill-card scroll-reveal">Cinema 4D</div>
+            <div class="skill-card scroll-reveal">Figma</div>
+            <div class="skill-card scroll-reveal">Premiere Pro</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="scroll-reveal">My Work</h2>
+        <div class="gallery">
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/10.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/12.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/9.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/8.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/3.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/4.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/typo.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('video-modal')">
+                <video width="320" height="320" controls>
+                    <source src="img/6.mp4" type="video/mp4" alt="Video Project Thumbnail" class="project-thumbnail">
+                </video>
+                <div class="project-info">
+                    <h3>Motion Graphics Video</h3>
+                    <p>A dynamic animation created for [client/industry].</p>
+                    <span class="media-type">Video</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('image-modal')">
+                <img src="img/13.jpg" alt="Image Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Branding Poster</h3>
+                    <p>A striking poster design for [client/industry].</p>
+                    <span class="media-type">Image</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('image-modal')">
+                <img src="img/14.jpg" alt="Image Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Branding Poster</h3>
+                    <p>A striking poster design for [client/industry].</p>
+                    <span class="media-type">Image</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('image-modal')">
+                <img src="img/k2.jpg" alt="Image Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Branding Poster</h3>
+                    <p>A striking poster design for [client/industry].</p>
+                    <span class="media-type">Image</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('image-modal')">
+                <img src="img/k1.jpg" alt="Image Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Branding Poster</h3>
+                    <p>A striking poster design for [client/industry].</p>
+                    <span class="media-type">Image</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('gif-modal')">
+                <img src="img/1.gif" alt="GIF Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Animated Logo</h3>
+                    <p>A looping GIF animation for [client/industry].</p>
+                    <span class="media-type">GIF</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('gif-modal')">
+                <img src="img/a1.gif" alt="GIF Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Animated Logo</h3>
+                    <p>A looping GIF animation for [client/industry].</p>
+                    <span class="media-type">GIF</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('gif-modal')">
+                <img src="img/a2.gif" alt="GIF Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Animated Logo</h3>
+                    <p>A looping GIF animation for [client/industry].</p>
+                    <span class="media-type">GIF</span>
+                </div>
+            </div>
+            <div class="project-card scroll-reveal" onclick="openModal('gif-modal')">
+                <img src="img/s1.gif" alt="GIF Project Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Name Logo</h3>
+                    <p>A name GIF animation for [client/industry].</p>
+                    <span class="media-type">GIF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials parallax">
+        <h2 class="scroll-reveal">What Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card scroll-reveal">
+                <p>🧠 "They called me a genius. I just used Ctrl+Z at the right time."</p>
+                <h4>💬 , no Company</h4>
+            </div>
+            <div class="testimonial-card scroll-reveal">
+                <p>🧩 "Client loved the design. I pretended it was intentional the whole time."</p>
+                <h4>💬  , no Company</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="scroll-reveal">Contact Me</h2>
+        <p class="scroll-reveal">Let's create something extraordinary!</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="social-links scroll-reveal">
+            <a href="https://behance.net/yourprofile" target="_blank">Behance</a>
+            <a href="https://dribbble.com/nenotechninja" target="_blank">Dribbble</a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Swadesh Chakraborty Mithu. All rights reserved.</p>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn auth-btn pulse-glow">Login</a>
+        </div>
+    </footer>
+
+    <!-- Project Modals -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('video-modal')">×</span>
+            <h3>Motion Graphics Video</h3>
+            <p>A dynamic animation created for [client/industry].</p>
+            <p><strong>Tools:</strong> Adobe After Effects, Cinema 4D</p>
+            <iframe src="https://player.vimeo.com/video/your-video-id" width="100%" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen class="modal-media"></iframe>
+        </div>
+    </div>
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('image-modal')">×</span>
+            <h3>Branding Poster</h3>
+            <p>A striking poster design for [client/industry].</p>
+            <p><strong>Tools:</strong> Adobe Photoshop, Adobe Illustrator</p>
+            <img src="https://via.placeholder.com/600x400?text=Poster+Design" alt="Branding Poster" class="modal-media">
+        </div>
+    </div>
+    <div id="gif-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gif-modal')">×</span>
+            <h3>Animated Logo</h3>
+            <p>A looping GIF animation for [client/industry].</p>
+            <p><strong>Tools:</strong> Adobe After Effects</p>
+            <img src="https://via.placeholder.com/600x400?text=Animated+GIF" alt="Animated Logo" class="modal-media">
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
